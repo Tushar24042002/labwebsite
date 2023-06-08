@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+
+
+<div class="container py-5">
+    <h1 class="text-center text-danger">Labs Data</h1>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Logo Image</th>
+                        <th>Cost</th>
+                        <th>MRP</th>
+                        <th>collectionType</th>
+                        <th>Certified</th>
+                        <th>Days</th>
+                        <th>Timing</th>
+                        <th>Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if(labs.length > 0){ %>
+                    <% for(var i = 0; i< labs.length;i++){ %>
+                        <tr>
+                            <td><%- labs[i].id %></td>
+                            <td><%- labs[i].name %></td>
+                            <td><%- labs[i].address %></td>
+                            <td><%- labs[i].phone %></td>
+                            <td><%- labs[i].logo %></td>
+                            <td><%- labs[i].cost %></td>
+                            <td><%- labs[i].mrp %></td>
+                            <td><%- labs[i].collectionType %></td>
+                            <td><%- labs[i].certified %></td>
+                            <td><%- labs[i].days %></td>
+                            <td><%- labs[i].timing %></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a href="/editlab/<%- labs[i].id %>&<%- labs[i].logo %>" class="btn btn-primary btn-sm ">Edit</a>
+                                    <a href="/deletelab/<%- labs[i].id %>&<%- labs[i].logo %>" class="btn btn-danger btn-sm ml-2">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    <% } %>
+                    <% } else{ %>
+                        <tr>
+                            <td>Not found</td>
+                        </tr>
+                        <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

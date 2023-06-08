@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color:#2125297b;
+    color: white;
+    background-image: url('./Assets/banner.jpg');
+    background-repeat: revert;
+    background-position: inherit;
+    background-size: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+body::before{
+    
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0.8;
+    background: #00204c;
+
+}
+.bg-blue {
+    background-color: #092e67;
+}
+.text-blue{
+    color: #092e67;
+}
+
+
+
+
+/* full body */
+#full-body{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+
+/* header navbar */
+#nav {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* header search bar section */
+#search-bar {
+    z-index: 999;
+    position: relative;
+    max-width: 600px;
+}
+#heading-text{
+    z-index: 999;
+    position: relative; 
+}
+#search-bar input {
+    height: 50px;
+    border-radius: 20px;
+}
+
+
+/* meal card */
+#main .foodbox, #favourites-body .foodbox {
+    background-color: #092e67;
+    padding: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+}
+#main .foodbox, #favourites-body .foodbox .category{
+    font-size: 14px;
+}
+#main .foodbox .food-img, #favourites-body .foodbox .food-img {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* meal details container */
+#meal-details{
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color:#092e67 ;
+}
+#meal-header{
+    width: 70%;
+    margin: auto;
+}
+#meal-thumbail img{
+    height: 250px;
+    width: 250px;
+    border-radius: 10%;
+}
+#details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+}
+
+
+
+
+/* favourites offcanvus */
+#favourites-body{
+    background-color:#fff ;
+}
+
+
+/* media query */
+@media(max-width : 1191px){
+    #main .foodbox, #favourites-body .foodbox{
+        padding: 15px 15px;
+    }
+}
+
+
+
+/* favbtn */
+.fav-btn{
+    border-radius: 50%;
+}
+.fav-btn.active{
+    background-color: red;
+}
+.fav-btn.active i{
+    color: #fff;
+}
+
+
+.container{
+    position: relative;
+    z-index: 99;
+}
+
+
+
+/* meal page */
+#meal-instruction h5{
+position: relative;
+text-align: left;
+width: fit-content;
+color: #092e67;
+}
+
+/* #meal-instruction h5::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 75%;
+    height: 2px;
+    background-color: yellow;
+} */
+#meal-instruction p{
+    text-align: justify;
+}
+
+#meal-ingredients p span{
+    font-size: 20px;
+    font-weight: 500;
+    color: #092e67;
+}
+
+
+
+
+#offcanvasNavbar .foodbox{
+    height: fit-content;
+}
+
+
+
+
+/* success added alert */
+#alertbox{
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    
+    top: 10px;
+    z-index: 9999;
+}
+#alertbox #addAlert, #alertbox #removeAlert{
+    width: fit-content;
+    position: relative;
+    margin: auto;
+}
+
+
+
+/* favourite list empty */
+#emptyfav span, #emptyfav .lead{
+color:  #000 !important;
+}
+
+
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+  } */
+  
+  input[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+  }
+  
+  input[type=submit] {
+    background-color: DodgerBlue;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items {
+    height: 250px;
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    overflow-y: auto;
+    left: 14px;
+    right: 14px;
+  }
+  
+  .autocomplete-items div {
+    color: #092e67;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid grey;
+    text-align: left;
+  }
+  
+  /*when hovering an item:*/
+  .autocomplete-items div:hover {
+    background-color: #e9e9e9; 
+  }
+  
+  /*when navigating through the items using the arrow keys:*/
+  .autocomplete-active {
+    background-color: DodgerBlue !important; 
+    color: #092e67; 
+  }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Site</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card shadow">
+            <div class="card-body p-4">
+              <h2 class="text-danger text-center mb-3">Form Registration</h2>
+              <form action="/editlab/<%- labs[0].id %>&<%- labs[0].logo %>" enctype="multipart/form-data" method="post" class="row form">
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Name : </label>
+                  <input type="text" name="name" value="<%- labs[0].name %>" class="form-control" />
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Address : </label>
+                  <input type="text" value="<%- labs[0].address %>" class="form-control" name="address" id="" />
+
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Phone : </label>
+                  <input type="number" value="<%- labs[0].phone %>" class="form-control" name="phone" id="" />
+                  
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Logo : </label>
+                  <input type="file" value="<%- labs[0].logo %>" class="form-control" name="logo" />
+                  
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Cost : </label>
+                  <input type="number" value="<%- labs[0].cost %>" class="form-control" name="cost" id="" />
+               
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">MRP : </label>
+                  <input type="number" value="<%- labs[0].mrp %>" class="form-control" name="mrp" id="" />
+                
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Collection Type : </label>
+                  <select name="collectionType" id="" class="form-control form-select" value="<%- labs[0].collectionType %>">
+                    <option value="lab" selected>Lab</option>
+                    <option value="Home">Home</option>
+                    <option value="Both">Both</option>
+                  </select>
+                 
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Certified : </label>
+                  <input type="text" value="<%- labs[0].certified %>" class="form-control" name="certified" id="" />
+                  
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Days : </label>
+                  <input type="text" value="<%- labs[0].days %>" class="form-control" name="days" id="" />
+
+                </div>
+                <div class="col-lg-6 my-2">
+                  <label for="" class="form-label mb-1">Timing : </label>
+                  <input type="text" value="<%- labs[0].timing %>" class="form-control" name="timing" id="" />
+
+                </div>
+
+                
+                
+<div class="col-lg-12 mt-3">
+  <button type="submit" class="btn btn-success w-100 ">Submit</button>
+</div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
